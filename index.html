@@ -1,11 +1,512 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMKTAG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK 17 AGUSTUS 1945 SURABAYA | Redesign Landing Page</title>
+
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <!-- ==========================================================================
+       1. HEADER / TOP BAR
+       ========================================================================== -->
+  <header>
+    <div class="top-bar">
+      <div class="container">
+        <div class="header-info-group">
+          <div class="header-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Jl. Nginden Semolo No. 44, Surabaya</span>
+          </div>
+          <div class="header-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>031-5925238</span>
+          </div>
+          <div class="header-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@smktag.sch.id</span>
+          </div>
+        </div>
+
+        <div class="header-info-group">
+          <div class="tagline-badge">
+            "Berbudi Luhur, Berkualitas dan Berkompeten"
+          </div>
+          <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-header">
+      <div class="container">
+        <div class="brand-logo-wrapper">
+          <a href="index.html" class="logo-img" title="Beranda">
+            TAG
+          </a>
+          <div class="brand-title">
+            <h1>SMK 17 AGUSTUS 1945 SURABAYA</h1>
+            <p>Sekolah Menengah Kejuruan Terakreditasi A • Surabaya</p>
+          </div>
+        </div>
+        <div>
+          <a href="https://spmb.smktag.sch.id" class="btn btn-primary">
+            <i class="fa-solid fa-user-plus"></i> SPMB Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. NAVIGASI UTAMA (NAVBAR)
+       ========================================================================== -->
+  <nav class="navbar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Buka Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="#" class="nav-link"><i class="fa-solid fa-house"></i> Beranda</a>
+        </li>
+
+        <!-- PROFIL DROPDOWN -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">Profil <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Profil Sekolah</a></li>
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Visi Misi</a></li>
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Struktur Organisasi</a></li>
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Sarana dan Prasarana</a></li>
+            <li class="dropdown-item">
+              <a href="#" class="dropdown-link">Galeri <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="#" class="dropdown-link">Galeri Foto</a></li>
+                <li class="dropdown-item"><a href="#" class="dropdown-link">Galeri Video</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- KOMPETENSI KEAHLIAN DROPDOWN -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">Kompetensi Keahlian <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Rekayasa Perangkat Lunak (RPL)</a></li>
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Akomodasi Perhotelan (APH)</a></li>
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Usaha Perjalanan Wisata (UPW)</a></li>
+            <li class="dropdown-item"><a href="#" class="dropdown-link">Tata Boga / Kuliner</a></li>
+          </ul>
+        </li>
+
+        <!-- SUBDOMAIN SEPARATE LINKS -->
+        <li class="nav-item">
+          <a href="https://spmb.smktag.sch.id" class="nav-link" target="_blank">SPMB <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i></a>
+        </li>
+        <li class="nav-item">
+          <a href="https://kelulusan.smktag.sch.id" class="nav-link" target="_blank">Kelulusan <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i></a>
+        </li>
+
+        <!-- APLIKASI SISTEM DROPDOWN -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">Aplikasi Sistem <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="https://siakad.smktag.sch.id" class="dropdown-link" target="_blank">SI Akademik</a></li>
+            <li class="dropdown-item"><a href="https://elearning.smktag.sch.id" class="dropdown-link" target="_blank">E-Learning</a></li>
+            <li class="dropdown-item"><a href="https://erapor.smktag.sch.id" class="dropdown-link" target="_blank">E-Rapor SMK</a></li>
+            <li class="dropdown-item"><a href="https://cbt.smktag.sch.id" class="dropdown-link" target="_blank">CBT Online</a></li>
+            <li class="dropdown-item"><a href="https://elibrary.smktag.sch.id" class="dropdown-link" target="_blank">E-Library</a></li>
+            <li class="dropdown-item"><a href="https://smktag.sch.id/arsip" class="dropdown-link">Repository Online</a></li>
+            <li class="dropdown-item"><a href="https://smktag.sch.id/mail" class="dropdown-link">Webmail SMKTAG</a></li>
+          </ul>
+        </li>
+
+        <!-- HUMAS REDIRECT -->
+        <li class="nav-item">
+          <a href="notavailable.html" class="nav-link">Humas</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       3. HERO / BANNER SECTION
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- FEATURED SLIDER -->
+        <div class="slider-container">
+          <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop" alt="Penerimaan Siswa Baru">
+              <div class="slide-caption">
+                <span class="badge-mono">Pendaftaran 2026/2027</span>
+                3. Penerimaan Siswa Baru (SPMB) Telah Dibuka
+                <p>Bergabunglah bersama SMK 17 Agustus 1945 Surabaya. Siap Kerja, Santun, dan Kompeten.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1000&auto=format&fit=crop" alt="Praktik Laboratorium Rekayasa Perangkat Lunak">
+              <div class="slide-caption">
+                <span class="badge-mono">Fasilitas Unggulan</span>
+                <h3>Praktik Laboratorium RPL Berstandar Industri</h3>
+                <p>Mengasah keahlian pemrograman, komputasi awan, dan pengembangan perangkat lunak modern.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1000&auto=format&fit=crop" alt="Praktik Tata Boga">
+              <div class="slide-caption">
+                <span class="badge-mono">Kompetensi Keahlian</span>
+                <h3>Dapur Praktik Kuliner & Tata Boga</h3>
+                <p>Mencetak tenaga profesional di bidang kuliner dan manajemen perhotelan bertaraf nasional.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <!-- ROTATING STAMP BADGE CARD -->
+        <div class="hero-badge-card">
+          <div class="stamp-container">
+            <!-- Circular SVG Text Stamp -->
+            <svg class="stamp-svg" viewBox="0 0 100 100">
+              <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+              <text fill="#B4863D" font-size="7.5" font-family="Montserrat" font-weight="800" letter-spacing="1px">
+                <textPath href="#circlePath" startOffset="0%">
+                  • BERBUDI LUHUR • BERKUALITAS • BERKOMPETEN • SMKTAG
+                </textPath>
+              </text>
+            </svg>
+            <div class="stamp-center-logo">
+              <span>SMK</span>
+              <span style="font-size: 0.6rem; color: #D8AA60;">1945</span>
+            </div>
+          </div>
+
+          <h2>SMK 17 AGUSTUS 1945</h2>
+          <p>Lembaga pendidikan kejuruan berdedikasi sejak 1996 di bawah naungan YPTA Surabaya. Membentuk generasi muda siap melangkah ke dunia kerja industri.</p>
+          
+          <a href="https://spmb.smktag.sch.id" class="btn btn-gold" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-paper-plane"></i> Informasi SPMB Online
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KOMPETENSI KEAHLIAN (PATCH/EMBROIDERED CARDS)
+       ========================================================================== -->
+  <section class="majors-section">
+    <div class="container">
+      <div class="section-title">
+        Kompetensi Keahlian
+      </div>
+
+      <div class="majors-grid">
+        <!-- RPL -->
+        <div class="major-patch-card">
+          <div class="patch-header">
+            <div class="patch-icon"><i class="fa-solid fa-code"></i></div>
+            <span class="patch-code">RPL</span>
+          </div>
+          <h3>Rekayasa Perangkat Lunak</h3>
+          <p>Fokus pada pemrograman web, aplikasi mobile, basis data, dan rekayasa sistem lunak industri.</p>
+          <a href="#" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.75rem;">Detail Program</a>
+        </div>
+
+        <!-- APH -->
+        <div class="major-patch-card">
+          <div class="patch-header">
+            <div class="patch-icon"><i class="fa-solid fa-hotel"></i></div>
+            <span class="patch-code">APH</span>
+          </div>
+          <h3>Akomodasi Perhotelan</h3>
+          <p>Pelatihan operasional kantor depan (front office), tata graha (housekeeping), dan pelayanan perhotelan.</p>
+          <a href="#" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.75rem;">Detail Program</a>
+        </div>
+
+        <!-- UPW -->
+        <div class="major-patch-card">
+          <div class="patch-header">
+            <div class="patch-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <span class="patch-code">UPW</span>
+          </div>
+          <h3>Usaha Perjalanan Wisata</h3>
+          <p>Keahlian dalam perencanaan tur, pemanduan wisata, tiketing, dan pengelolaan destinasi pariwisata.</p>
+          <a href="#" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.75rem;">Detail Program</a>
+        </div>
+
+        <!-- TATA BOGA -->
+        <div class="major-patch-card">
+          <div class="patch-header">
+            <div class="patch-icon"><i class="fa-solid fa-utensils"></i></div>
+            <span class="patch-code">TB</span>
+          </div>
+          <h3>Tata Boga / Kuliner</h3>
+          <p>Penguasaan seni kuliner, tata hidang, pengolahan makanan nusantara & internasional, serta kewirausahaan.</p>
+          <a href="#" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.75rem;">Detail Program</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. KONTEN UTAMA (BERITA & SAMBUTAN KEPSEK)
+       ========================================================================== -->
+  <main class="main-section">
+    <div class="container main-layout">
+      
+      <!-- 4.1 BERITA SECTION -->
+      <section id="berita">
+        <div class="section-title">
+          Berita & Informasi Terbaru
+        </div>
+
+        <div class="news-grid">
+          <!-- News Card 1 -->
+          <article class="news-card">
+            <div class="news-thumb">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" alt="Uji Kompetensi Keahlian">
+              <span class="news-date-badge">12 FEB 2026</span>
+            </div>
+            <div class="news-content">
+              <h3 class="news-title">
+                <a href="#">Pelaksanaan Uji Kompetensi Keahlian (UKK) Berstandar Industri Tahun 2026</a>
+              </h3>
+              <p class="news-excerpt">
+                Siswa-siswi tingkat akhir SMK 17 Agustus 1945 Surabaya menjalani pengujian karya keahlian teknis bersama para penguji dari DUDI mitra sekolah...
+              </p>
+              <div class="news-footer">
+                <span class="badge-mono">UKK</span>
+                <a href="#" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.75rem;">Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Card 2 -->
+          <article class="news-card">
+            <div class="news-thumb">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" alt="Kunjungan Industri">
+              <span class="news-date-badge">28 JAN 2026</span>
+            </div>
+            <div class="news-content">
+              <h3 class="news-title">
+                <a href="#">Kunjungan Industri & Workshop Teknologi Informasi Jurusan RPL di Surabaya</a>
+              </h3>
+              <p class="news-excerpt">
+                Memperluas wawasan praktis, puluhan siswa jurusan Rekayasa Perangkat Lunak berkunjung ke software house ternama untuk mempelajari budaya kerja Agile...
+              </p>
+              <div class="news-footer">
+                <span class="badge-mono">Pendidikan</span>
+                <a href="#" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.75rem;">Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- News Card 3 -->
+          <article class="news-card">
+            <div class="news-thumb">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop" alt="Peringatan Hari Kemerdekaan">
+              <span class="news-date-badge">15 JAN 2026</span>
+            </div>
+            <div class="news-content">
+              <h3 class="news-title">
+                <a href="#">Sosialisasi Program Pembelajaran Berbasis Karakter & Integritas Siswa</a>
+              </h3>
+              <p class="news-excerpt">
+                SMKTAG menyelenggarakan agenda pembinaan mental & etika profesi guna membekali lulusan agar memiliki keunggulan berbudi luhur di dunia bisnis...
+              </p>
+              <div class="news-footer">
+                <span class="badge-mono">Pengumuman</span>
+                <a href="#" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.75rem;">Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-posts-wrapper">
+          <button class="btn btn-outline" id="loadMoreBtn">
+            <i class="fa-solid fa-rotate-right"></i> MORE POSTS
+          </button>
+        </div>
+      </section>
+
+      <!-- 4.2 CARD SAMBUTAN KEPALA SEKOLAH -->
+      <section class="principal-card">
+        <div class="principal-grid">
+          <div class="principal-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Foto Kepala Sekolah" class="principal-photo">
+            <div class="principal-badge">KEPALA SEKOLAH</div>
+          </div>
+
+          <div class="principal-text">
+            <h3>Dra. Hj. Ida Ayu Laksmi Dewi, M.M.</h3>
+            <span class="principal-title-sub">Kepala SMK 17 Agustus 1945 Surabaya</span>
+            
+            <p class="principal-quote">
+              "Selamat datang di portal resmi SMK 17 Agustus 1945 Surabaya. Kami berkomitmen untuk menyelenggarakan pendidikan kejuruan yang tidak hanya mengasah keterampilan teknis berstandar industri, tetapi juga menanamkan nilai-nilai kebangsaan, integritas moral, dan kedisiplinan. Melalui sinergi bersama industri mitra, kami siap membimbing para siswa menjadi insan yang Berbudi Luhur, Berkualitas, dan Berkompeten."
+            </p>
+
+            <a href="#" class="btn btn-gold">
+              <i class="fa-solid fa-book-open"></i> Baca Sambutan Lengkap
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4.3 TAGS CLOUD -->
+      <section class="tags-section">
+        <div class="tags-title">
+          <i class="fa-solid fa-tags" style="color: var(--brass-gold);"></i> Indeks Kata Kunci / Tags
+        </div>
+        <div class="tag-cloud">
+          <a href="#" class="tag-item">#Berita</a>
+          <a href="#" class="tag-item">#Pengumuman</a>
+          <a href="#" class="tag-item">#SekilasInfo</a>
+          <a href="#" class="tag-item">#UKK</a>
+          <a href="#" class="tag-item">#Pendidikan</a>
+          <a href="#" class="tag-item">#PPG</a>
+          <a href="#" class="tag-item">#RPL</a>
+          <a href="#" class="tag-item">#Perhotelan</a>
+          <a href="#" class="tag-item">#TataBoga</a>
+          <a href="#" class="tag-item">#Pariwisata</a>
+          <a href="#" class="tag-item">#SPMB2026</a>
+          <a href="#" class="tag-item">#PrestasiSiswa</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       5. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- COL 1: CONTACT INFO -->
+        <div class="footer-col">
+          <h4>Hubungi Kami</h4>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span><strong>Alamat:</strong> Jl. Nginden Semolo No. 44, Menur Pumpungan, Sukolilo, Surabaya, Jawa Timur 60118</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span><strong>Telepon:</strong> (031) 5925238</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-fax"></i>
+              <span><strong>Fax:</strong> (031) 5925238</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span><strong>Email:</strong> info@smktag.sch.id</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COL 2: ARSIP ACCORDION -->
+        <div class="footer-col">
+          <h4>Arsip Berita</h4>
+          <div class="archive-accordion">
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Arsip Tahun 2025 - 2026</span>
+                <i class="fa-solid fa-plus" style="font-size: 0.75rem;"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="#">Januari 2026 (4)</a>
+                <a href="#">Desember 2025 (8)</a>
+                <a href="#">November 2025 (5)</a>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Arsip Tahun 2023 - 2024</span>
+                <i class="fa-solid fa-plus" style="font-size: 0.75rem;"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="#">Oktober 2024 (6)</a>
+                <a href="#">Agustus 2024 (12)</a>
+                <a href="#">Mei 2023 (9)</a>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Arsip Tahun 2017 - 2022</span>
+                <i class="fa-solid fa-plus" style="font-size: 0.75rem;"></i>
+              </button>
+              <div class="accordion-content">
+                <a href="#">Arsip Dokumentasi 2022</a>
+                <a href="#">Arsip Dokumentasi 2020</a>
+                <a href="#">Arsip Publikasi 2017</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COL 3: TAUTAN EKSTERNAL -->
+        <div class="footer-col">
+          <h4>Tautan Penting</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="#" target="_blank"><i class="fa-solid fa-video"></i> Video Company Profile</a>
+            </li>
+            <li>
+              <a href="https://elearning.smktag.sch.id" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Portal E-Learning SMKTAG</a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fa-solid fa-file-contract"></i> Kartu Kompetensi RPL & Surat Pernyataan</a>
+            </li>
+            <li>
+              <a href="https://spmb.smktag.sch.id" target="_blank"><i class="fa-solid fa-id-card"></i> Pendaftaran SPMB Online</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COPYRIGHT BOTTOM -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div>
+          &copy; 2017 - 2026 <strong>SMK 17 AGUSTUS 1945 SURABAYA</strong>. Hak Cipta Dilindungi.
+        </div>
+        <div class="credit-tag">
+          Powered by <a href="https://sekolahku.web.id" target="_blank" style="color: var(--brass-light); text-decoration: underline;">sekolahku.web.id</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
