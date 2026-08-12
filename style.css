@@ -40,7 +40,7 @@ section[id],
 main[id],
 footer[id],
 [id] {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 80px;
 }
 
 body {
@@ -123,6 +123,19 @@ ul {
 
 .btn-gold:hover {
   background-color: var(--brass-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(180, 134, 61, 0.3);
+}
+
+.btn-hero-secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--brass-light);
+  border: 2px solid var(--brass-gold);
+}
+
+.btn-hero-secondary:hover {
+  background-color: var(--brass-gold);
+  color: #FFFFFF;
 }
 
 .badge-mono {
@@ -156,6 +169,49 @@ ul {
   height: 28px;
   background-color: var(--merah-merdeka);
   border-radius: 2px;
+}
+
+.section-pad {
+  padding: 56px 0;
+}
+
+.section-head {
+  max-width: 820px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-head p {
+  color: var(--charcoal-muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.section-decorator {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background-color: var(--merah-merdeka);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-navy);
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -359,14 +415,6 @@ ul {
   padding-left: 22px;
 }
 
-/* SUB DROPDOWN */
-.dropdown-menu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  border-top: none;
-  border-left: 3px solid var(--brass-gold);
-}
-
 .mobile-toggle {
   display: none;
   background: none;
@@ -474,7 +522,7 @@ ul {
 .hero-badge-card {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(180, 134, 61, 0.3);
-  padding: 32px;
+  padding: 32px 24px;
   border-radius: 12px;
   text-align: center;
   position: relative;
@@ -484,12 +532,11 @@ ul {
   align-items: center;
 }
 
-/* SIGNATURE STAMP SVG ROTATING */
 .stamp-container {
   position: relative;
-  width: 160px;
-  height: 160px;
-  margin-bottom: 20px;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 16px;
 }
 
 .stamp-svg {
@@ -508,8 +555,8 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  width: 66px;
+  height: 66px;
   background: var(--merah-merdeka);
   border-radius: 50%;
   display: flex;
@@ -526,16 +573,25 @@ ul {
 
 .hero-badge-card h2 {
   font-family: var(--font-display);
-  font-size: 1.4rem;
-  letter-spacing: 0.05em;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
   color: var(--paper-bg);
   margin-bottom: 10px;
+  line-height: 1.3;
 }
 
 .hero-badge-card p {
   font-size: 0.88rem;
   color: var(--paper-dark);
   margin-bottom: 20px;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .hero-strip {
@@ -558,8 +614,7 @@ ul {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 110px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  min-height: 100px;
 }
 
 .hero-strip .num {
@@ -585,16 +640,157 @@ ul {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--paper-dark);
 }
 
 /* ==========================================================================
-   KOMPETENSI KEAHLIAN - EMBROIDERED PATCH CARDS
+   4. KEUNGGULAN SEKOLAH SECTION
+   ========================================================================== */
+.keunggulan-section {
+  background-color: var(--paper-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.keunggulan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.keunggulan-card {
+  background: var(--paper-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.keunggulan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brass-gold);
+}
+
+.keunggulan-icon {
+  width: 52px;
+  height: 52px;
+  background-color: var(--ink-navy);
+  color: var(--brass-gold);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  border: 1px solid var(--brass-gold);
+}
+
+.keunggulan-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink-navy);
+  margin-bottom: 10px;
+}
+
+.keunggulan-card p {
+  font-size: 0.92rem;
+  color: var(--charcoal-muted);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   5. GALERI FASILITAS UTAMA SECTION
+   ========================================================================== */
+.fasilitas-section {
+  background-color: var(--paper-dark);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.fasilitas-card {
+  background-color: var(--paper-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.fasilitas-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brass-gold);
+}
+
+.fasilitas-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.fasilitas-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fasilitas-card:hover .fasilitas-img-wrap img {
+  transform: scale(1.08);
+}
+
+.fasilitas-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--ink-navy);
+  color: var(--brass-light);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--brass-gold);
+}
+
+.fasilitas-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.fasilitas-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--ink-navy);
+  margin-bottom: 8px;
+}
+
+.fasilitas-body p {
+  font-size: 0.88rem;
+  color: var(--charcoal-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   6. KOMPETENSI KEAHLIAN (PATCH CARDS)
    ========================================================================== */
 .majors-section {
-  padding: 48px 0;
-  background-color: var(--paper-dark);
+  padding: 56px 0;
+  background-color: var(--paper-bg);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -666,7 +862,7 @@ ul {
 }
 
 /* ==========================================================================
-   4. KONTEN UTAMA (LAYOUT 1 KOLOM MAIN)
+   7. KONTEN UTAMA (LAYOUT 1 KOLOM MAIN)
    ========================================================================== */
 .main-section {
   padding: 56px 0;
@@ -678,7 +874,7 @@ ul {
   gap: 48px;
 }
 
-/* 4.1 NEWS SECTION */
+/* 7.1 NEWS SECTION */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -772,76 +968,91 @@ ul {
   margin-top: 16px;
 }
 
-/* 4.2 CARD SAMBUTAN KEPALA SEKOLAH */
-.principal-card {
-  background: linear-gradient(135deg, var(--ink-navy) 0%, #233545 100%);
-  color: var(--paper-bg);
-  border-radius: 12px;
-  padding: 36px;
-  border-left: 6px solid var(--brass-gold);
-  box-shadow: var(--shadow-md);
-  margin-top: 24px;
+/* 7.2 SAMBUTAN KEPALA SEKOLAH (gaya About Us ala sman5sby.sch.id) */
+.sambutan-section {
+  background-color: var(--paper-card);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.principal-grid {
+.sambutan-grid {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 32px;
-  align-items: center;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
-.principal-photo-wrapper {
-  position: relative;
-  text-align: center;
+.sambutan-photo-col {
+  position: sticky;
+  top: 100px;
 }
 
-.principal-photo {
-  width: 180px;
-  height: 220px;
-  border-radius: 8px;
-  object-fit: cover;
+.sambutan-photo-frame {
+  border-radius: var(--border-radius);
+  overflow: hidden;
   border: 3px solid var(--brass-gold);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
 }
 
-.principal-badge {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  background: var(--merah-merdeka);
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 12px;
-  display: inline-block;
-  margin-top: -12px;
-  position: relative;
-  z-index: 2;
+.sambutan-photo {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
 }
 
-.principal-text h3 {
+.sambutan-signature {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background-color: var(--ink-navy);
+  border-left: 3px solid var(--brass-gold);
+  border-radius: 4px;
+}
+
+.sambutan-signature h4 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.05rem;
   color: var(--paper-bg);
-  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
-.principal-title-sub {
+.sambutan-signature span {
   font-family: var(--font-mono);
+  font-size: 0.78rem;
   color: var(--brass-light);
-  font-size: 0.85rem;
-  margin-bottom: 16px;
-  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.principal-quote {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: var(--paper-dark);
-  font-style: italic;
+.sambutan-text-col .section-decorator {
+  margin-bottom: 14px;
+}
+
+.sambutan-text-col .display {
   margin-bottom: 20px;
-  position: relative;
 }
 
-/* 4.3 TAGS CLOUD */
+.sambutan-greeting {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--merah-merdeka);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.sambutan-text-col p {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--charcoal-muted);
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+.sambutan-text-col .btn {
+  margin-top: 8px;
+}
+
+/* 7.3 TAGS CLOUD */
 .tags-section {
   background-color: var(--paper-card);
   border: 1px solid var(--border-color);
@@ -885,54 +1096,10 @@ ul {
   border-color: var(--merah-merdeka);
 }
 
-.section-pad {
-  padding: 56px 0;
-}
-
-.section-head {
-  max-width: 760px;
-  margin-bottom: 24px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 14px;
-}
-
-.section-head p {
-  width: 100%;
-  color: var(--charcoal-muted);
-  line-height: 1.8;
-  font-size: 1rem;
-  margin: 0;
-}
-
-.section-decorator {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background-color: var(--merah-merdeka);
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-}
-
-.display {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 2.4vw, 2.4rem);
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--ink-navy);
-  margin-bottom: 0;
-}
-
+/* 7.4 KONTAK & FORMULIR KRITIK / SARAN */
 .kontak-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 1.1fr) minmax(320px, 0.9fr);
+  grid-template-columns: minmax(300px, 0.9fr) minmax(340px, 1.1fr);
   gap: 30px;
   align-items: start;
   margin-top: 24px;
@@ -941,7 +1108,7 @@ ul {
 .kontak-info {
   background-color: var(--paper-card);
   border: 1px solid var(--border-color);
-  border-radius: 18px;
+  border-radius: 12px;
   padding: 32px;
   box-shadow: var(--shadow-sm);
 }
@@ -953,42 +1120,111 @@ ul {
   margin-bottom: 22px;
 }
 
-.kontak-item:last-child {
-  margin-bottom: 0;
-}
-
 .kontak-item .ic {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 10px;
   background-color: rgba(180, 134, 61, 0.16);
   color: var(--brass-gold);
-  font-size: 1rem;
-}
-
-.kontak-item .ic i {
-  color: var(--brass-gold);
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .kontak-item h4 {
   font-family: var(--font-display);
-  font-size: 1rem;
-  margin-bottom: 6px;
+  font-size: 0.98rem;
+  margin-bottom: 4px;
   color: var(--ink-navy);
 }
 
 .kontak-item p {
   color: var(--charcoal-muted);
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* FORMULIR STYLES */
+.kontak-form-card {
+  background-color: var(--paper-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--merah-merdeka);
+}
+
+.kontak-form-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--ink-navy);
+  margin-bottom: 6px;
+}
+
+.kontak-form-card p {
+  font-size: 0.88rem;
+  color: var(--charcoal-muted);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-navy);
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  background-color: var(--paper-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--brass-gold);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(180, 134, 61, 0.15);
+}
+
+.form-alert-msg {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-alert-msg.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
 }
 
 .map-wrap {
-  min-height: 420px;
-  border-radius: 20px;
+  min-height: 380px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
@@ -997,23 +1233,13 @@ ul {
 .map-wrap iframe {
   width: 100%;
   height: 100%;
-  min-height: 420px;
+  min-height: 380px;
   border: 0;
   display: block;
 }
 
-@media (max-width: 992px) {
-  .kontak-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .map-wrap {
-    min-height: 320px;
-  }
-}
-
 /* ==========================================================================
-   5. FOOTER
+   8. FOOTER
    ========================================================================== */
 .site-footer {
   background-color: var(--ink-navy);
@@ -1048,19 +1274,6 @@ ul {
   width: 40px;
   height: 2px;
   background-color: var(--merah-merdeka);
-}
-
-.contact-list li {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 14px;
-  font-size: 0.88rem;
-  color: var(--paper-dark);
-}
-
-.contact-list i {
-  color: var(--brass-gold);
-  margin-top: 3px;
 }
 
 /* ARCHIVE ACCORDION */
@@ -1149,12 +1362,14 @@ ul {
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 992px) {
-  .hero-grid, .principal-grid, .footer-grid {
+  .hero-grid, .sambutan-grid, .footer-grid, .kontak-grid {
     grid-template-columns: 1fr;
   }
 
-  .principal-photo-wrapper {
-    margin: 0 auto;
+  .sambutan-photo-col {
+    position: static;
+    max-width: 280px;
+    margin: 0 auto 32px;
   }
 
   .mobile-toggle {
@@ -1195,6 +1410,10 @@ ul {
     border-left: none;
     padding-left: 16px;
   }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1209,11 +1428,24 @@ ul {
     gap: 12px;
   }
 
-  .news-grid {
+  .news-grid, .fasilitas-grid {
     grid-template-columns: 1fr;
   }
 
-  .principal-card {
-    padding: 20px;
+  .sambutan-section {
+    padding: 40px 0;
+  }
+
+  .sambutan-text-col p {
+    text-align: left;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+  }
+
+  .btn-hero-secondary, .btn-gold {
+    width: 100%;
+    justify-content: center;
   }
 }
