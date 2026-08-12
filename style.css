@@ -527,6 +527,57 @@ ul {
   margin-bottom: 20px;
 }
 
+.hero-strip {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(216, 170, 96, 0.3);
+}
+
+.hero-strip .item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(216, 170, 96, 0.28);
+  border-radius: 12px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 110px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.hero-strip .num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: var(--brass-light);
+  margin-bottom: 8px;
+}
+
+.hero-strip .plus-sign {
+  color: var(--paper-bg);
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
+.hero-strip .lbl {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: var(--paper-dark);
+}
+
 /* ==========================================================================
    KOMPETENSI KEAHLIAN - EMBROIDERED PATCH CARDS
    ========================================================================== */
