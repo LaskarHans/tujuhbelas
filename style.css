@@ -1,17 +1,22 @@
 ﻿/* ==========================================================================
    DESIGN SYSTEM & VARIABLES
-   Palet: Ink Navy, Paper, Merah Merdeka, Brass Gold, Charcoal
+   Palet: Maroon Burgundy (#861422), Paper, Merah Merdeka, Brass Gold, Charcoal
    ========================================================================== */
 :root {
-  --ink-navy: #1C2B39;
-  --ink-navy-light: #25384A;
+  /* Dasar Gelap Baru: Maroon / Burgundy (#861422) menggantikan Ink Navy */
+  --ink-navy: #861422;
+  --ink-navy-light: #9B1828; 
+  
   --paper-bg: #F6F1E4;
   --paper-card: #FFFFFF;
   --paper-dark: #ECE5D5;
   --merah-merdeka: #B33B2E;
   --merah-hover: #962E22;
+  
+  /* Aksen Stempel/Akreditasi (Brass Gold) dipertahankan */
   --brass-gold: #B4863D;
   --brass-light: #D8AA60;
+  
   --charcoal: #2A2620;
   --charcoal-muted: #625C52;
   --border-color: #DDD4C2;
@@ -20,9 +25,10 @@
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --shadow-sm: 0 2px 4px rgba(28, 43, 57, 0.05);
-  --shadow-md: 0 4px 12px rgba(28, 43, 57, 0.08);
-  --shadow-lg: 0 12px 28px rgba(28, 43, 57, 0.12);
+  /* Shadow disesuaikan dengan nilai RGB dari #861422 (134, 20, 34) agar bayangan harmonis */
+  --shadow-sm: 0 2px 4px rgba(134, 20, 34, 0.05);
+  --shadow-md: 0 4px 12px rgba(134, 20, 34, 0.08);
+  --shadow-lg: 0 12px 28px rgba(134, 20, 34, 0.12);
   --border-radius: 8px;
 }
 
@@ -429,7 +435,7 @@ ul {
    3. HERO / BANNER SECTION
    ========================================================================== */
 .hero-section {
-  background: linear-gradient(135deg, var(--ink-navy) 0%, #111B24 100%);
+  background: #3D060D;
   color: var(--paper-bg);
   position: relative;
   padding: 48px 0 64px 0;
@@ -438,7 +444,7 @@ ul {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: fr 0.8fr;
   gap: 32px;
   align-items: center;
 }
@@ -449,8 +455,9 @@ ul {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  border: 2px solid var(--brass-gold);
-  background-color: var(--ink-navy-light);
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  background-color: #3D060D;
+  min-height: 430px;
 }
 
 .slider-wrapper {
@@ -465,7 +472,7 @@ ul {
 
 .slide img {
   width: 100%;
-  height: 380px;
+  height: 430px;
   object-fit: cover;
   filter: brightness(0.85);
 }
@@ -476,7 +483,7 @@ ul {
   left: 0;
   right: 0;
   padding: 24px;
-  background: linear-gradient(to top, rgba(28, 43, 57, 0.95), transparent);
+  background: rgba(61, 6, 13, 0.9);
 }
 
 .slide-caption h3 {
@@ -504,7 +511,7 @@ ul {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(28, 43, 57, 0.7);
+  background: rgba(134, 20, 34, 0.7);
   border: 1px solid var(--brass-gold);
   color: var(--paper-bg);
   cursor: pointer;
@@ -520,8 +527,8 @@ ul {
 
 /* HERO STAMP & CARD */
 .hero-badge-card {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(180, 134, 61, 0.3);
+  background-color: #3D060D;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 32px 24px;
   border-radius: 12px;
   text-align: center;
@@ -605,8 +612,8 @@ ul {
 }
 
 .hero-strip .item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(216, 170, 96, 0.28);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 18px 16px;
   display: flex;
@@ -968,7 +975,7 @@ ul {
   margin-top: 16px;
 }
 
-/* 7.2 SAMBUTAN KEPALA SEKOLAH (gaya About Us ala sman5sby.sch.id) */
+/* 7.2 SAMBUTAN KEPALA SEKOLAH */
 .sambutan-section {
   background-color: var(--paper-card);
   border-top: 1px solid var(--border-color);
@@ -1097,12 +1104,17 @@ ul {
 }
 
 /* 7.4 KONTAK & FORMULIR KRITIK / SARAN */
+#kontak.section-pad {
+  padding-top: 28px;
+  padding-bottom: 0;
+}
+
 .kontak-grid {
   display: grid;
   grid-template-columns: minmax(300px, 0.9fr) minmax(340px, 1.1fr);
   gap: 30px;
   align-items: start;
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 .kontak-info {
@@ -1228,6 +1240,7 @@ ul {
   overflow: hidden;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
+  margin-top: 18px;
 }
 
 .map-wrap iframe {
