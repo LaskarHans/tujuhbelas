@@ -246,14 +246,22 @@ ul {
   color: var(--brass-gold);
 }
 
-.tagline-badge {
-  font-family: var(--font-mono);
+.header-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background-color: rgba(255, 255, 255, 0.08);
-  padding: 4px 12px;
+  border: 1px solid rgba(212, 170, 96, 0.6);
   border-radius: 20px;
-  border: 1px dashed var(--brass-gold);
+  padding: 6px 12px;
   color: var(--paper-bg);
-  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  opacity: 0.92;
+}
+
+.header-search i {
+  color: var(--brass-gold);
 }
 
 .social-icons {
@@ -300,17 +308,21 @@ ul {
 .logo-img {
   width: 64px;
   height: 64px;
-  background-color: var(--ink-navy);
-  border-radius: 50%;
+  background-color: transparent;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1.2rem;
-  border: 3px solid var(--brass-gold);
-  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border: none;
+  box-shadow: none;
+}
+
+.logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .brand-title h1 {
