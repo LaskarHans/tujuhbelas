@@ -133,17 +133,6 @@ ul {
   box-shadow: 0 4px 12px rgba(180, 134, 61, 0.3);
 }
 
-.btn-hero-secondary {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--brass-light);
-  border: 2px solid var(--brass-gold);
-}
-
-.btn-hero-secondary:hover {
-  background-color: var(--brass-gold);
-  color: #FFFFFF;
-}
-
 .badge-mono {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -525,82 +514,6 @@ ul {
   background: var(--merah-merdeka);
 }
 
-/* HERO STAMP & CARD */
-.hero-badge-card {
-  background-color: #3D060D;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 32px 24px;
-  border-radius: 12px;
-  text-align: center;
-  position: relative;
-  backdrop-filter: blur(4px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stamp-container {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 16px;
-}
-
-.stamp-svg {
-  width: 100%;
-  height: 100%;
-  animation: rotateStamp 30s linear infinite;
-}
-
-@keyframes rotateStamp {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.stamp-center-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 66px;
-  height: 66px;
-  background: var(--merah-merdeka);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 0.75rem;
-  border: 2px solid var(--brass-gold);
-  box-shadow: 0 0 15px rgba(180, 134, 61, 0.4);
-}
-
-.hero-badge-card h2 {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  letter-spacing: 0.04em;
-  color: var(--paper-bg);
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-
-.hero-badge-card p {
-  font-size: 0.88rem;
-  color: var(--paper-dark);
-  margin-bottom: 20px;
-}
-
-.hero-cta-group {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
 .hero-strip {
   grid-column: 1 / -1;
   display: grid;
@@ -866,6 +779,125 @@ ul {
   color: var(--charcoal-muted);
   margin-bottom: 16px;
   flex-grow: 1;
+}
+
+/* ==========================================================================
+   TAMBAHAN FITUR: TESTIMONI & ALUMNI
+   ========================================================================== */
+.testimoni-section {
+  background-color: var(--paper-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.testimoni-card,
+.alumni-sukses-card {
+  background-color: var(--paper-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimoni-card:hover,
+.alumni-sukses-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brass-gold);
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: rgba(180, 134, 61, 0.2); /* Brass gold transparent */
+  margin-bottom: 16px;
+}
+
+.testimoni-text {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.testimoni-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--ink-navy);
+  color: var(--paper-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimoni-author h4 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--ink-navy);
+}
+
+.testimoni-author span {
+  font-size: 0.75rem;
+  color: var(--charcoal-muted);
+}
+
+/* Alumni Sukses Card */
+.alumni-img {
+  position: relative;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.alumni-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.alumni-img .badge-mono {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--ink-navy);
+  color: var(--brass-light);
+}
+
+.alumni-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--ink-navy);
+  margin-bottom: 6px;
+}
+
+.alumni-info .role {
+  font-size: 0.85rem;
+  color: var(--merah-merdeka);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.alumni-info .desc {
+  font-size: 0.88rem;
+  color: var(--charcoal-muted);
 }
 
 /* ==========================================================================
@@ -1453,11 +1485,7 @@ ul {
     text-align: left;
   }
 
-  .hero-cta-group {
-    flex-direction: column;
-  }
-
-  .btn-hero-secondary, .btn-gold {
+  .btn-gold {
     width: 100%;
     justify-content: center;
   }
